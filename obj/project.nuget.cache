@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7Q7/X5XR2l4=",
+  "success": true,
+  "projectFilePath": "C:\\Mods\\DllMods\\Portal2TTS\\Portal2TTS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joyda\\.nuget\\packages\\system.speech\\10.0.11\\system.speech.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Portal2TTS/1.0.0": {
+        "dependencies": {
+          "System.Speech": "10.0.11"
+        },
+        "runtime": {
+          "Portal2TTS.dll": {}
+        }
+      },
+      "System.Speech/10.0.11": {
+        "runtime": {
+          "lib/net8.0/System.Speech.dll": {
+            "assemblyVersion": "10.0.0.11",
+            "fileVersion": "10.0.1126.37416"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Speech.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.11",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Portal2TTS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Speech/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-25EiYjCzE5CLx5CkOOum40bg8EBnVBNqklyEyn1KJT872eEh3ZakJppgunMqC2Hz1lJv9Mp7YbCC6LI1Ceemdw==",
+      "path": "system.speech/10.0.11",
+      "hashPath": "system.speech.10.0.11.nupkg.sha512"
+    }
+  }
+}

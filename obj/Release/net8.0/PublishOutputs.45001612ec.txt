@@ -1,0 +1,7 @@
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\Portal2TTS.exe
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\Portal2TTS.dll
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\Portal2TTS.deps.json
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\Portal2TTS.runtimeconfig.json
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\Portal2TTS.pdb
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\System.Speech.dll
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\runtimes\win\lib\net8.0\System.Speech.dll

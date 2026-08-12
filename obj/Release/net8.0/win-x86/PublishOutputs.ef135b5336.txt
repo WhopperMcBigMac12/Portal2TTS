@@ -1,0 +1,2 @@
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\win-x86\Portal2TTS.pdb
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\win-x86\Portal2TTS.exe

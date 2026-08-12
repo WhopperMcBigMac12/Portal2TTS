@@ -1,0 +1,5 @@
+Voice1=Microsoft David
+Voice2=Microsoft Zira
+
+Rate=0
+Volume=100

@@ -49,6 +49,14 @@
             "System.Speech": {
               "target": "Package",
               "version": "[10.0.11, )"
+            },
+            "System.Windows.Extensions": {
+              "target": "Package",
+              "version": "[10.0.11, )"
+            },
+            "org.k2fsa.sherpa.onnx": {
+              "target": "Package",
+              "version": "[1.13.5, )"
             }
           },
           "imports": [

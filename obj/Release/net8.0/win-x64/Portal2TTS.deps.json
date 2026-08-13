@@ -11,6 +11,8 @@
         "dependencies": {
           "Microsoft.NET.ILLink.Tasks": "8.0.23",
           "System.Speech": "10.0.11",
+          "System.Windows.Extensions": "10.0.11",
+          "org.k2fsa.sherpa.onnx": "1.13.5",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "8.0.23"
         },
         "runtime": {
@@ -694,10 +696,55 @@
         }
       },
       "Microsoft.NET.ILLink.Tasks/8.0.23": {},
+      "org.k2fsa.sherpa.onnx/1.13.5": {
+        "dependencies": {
+          "org.k2fsa.sherpa.onnx.runtime.android-arm64": "1.13.5",
+          "org.k2fsa.sherpa.onnx.runtime.android-x64": "1.13.5",
+          "org.k2fsa.sherpa.onnx.runtime.linux-arm64": "1.13.5",
+          "org.k2fsa.sherpa.onnx.runtime.linux-x64": "1.13.5",
+          "org.k2fsa.sherpa.onnx.runtime.osx-arm64": "1.13.5",
+          "org.k2fsa.sherpa.onnx.runtime.osx-x64": "1.13.5",
+          "org.k2fsa.sherpa.onnx.runtime.win-arm64": "1.13.5",
+          "org.k2fsa.sherpa.onnx.runtime.win-x64": "1.13.5",
+          "org.k2fsa.sherpa.onnx.runtime.win-x86": "1.13.5"
+        },
+        "runtime": {
+          "lib/net8.0/sherpa-onnx.dll": {
+            "assemblyVersion": "1.13.5.0",
+            "fileVersion": "1.13.5.0"
+          }
+        }
+      },
+      "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.5": {},
+      "org.k2fsa.sherpa.onnx.runtime.android-x64/1.13.5": {},
+      "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.5": {},
+      "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.5": {},
+      "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.5": {},
+      "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.5": {},
+      "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.5": {},
+      "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.5": {
+        "native": {
+          "runtimes/win-x64/native/onnxruntime.dll": {
+            "fileVersion": "1.27.1.0"
+          },
+          "runtimes/win-x64/native/sherpa-onnx-c-api.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.5": {},
       "System.Speech/10.0.11": {
         "runtime": {
           "runtimes/win/lib/net8.0/System.Speech.dll": {
             "assemblyVersion": "10.0.0.11",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "System.Windows.Extensions/10.0.11": {
+        "runtime": {
+          "runtimes/win/lib/net8.0/System.Windows.Extensions.dll": {
+            "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.1126.37416"
           }
         }
@@ -722,12 +769,89 @@
       "path": "microsoft.net.illink.tasks/8.0.23",
       "hashPath": "microsoft.net.illink.tasks.8.0.23.nupkg.sha512"
     },
+    "org.k2fsa.sherpa.onnx/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YCk9fwwlioQ2F9dQHhHpUyP96O+YWn3WTQJERWXdHqWgHOMzwKu+TKgW9Rx8hKA3ukDJwS1i5OqLdSCB4bUbvw==",
+      "path": "org.k2fsa.sherpa.onnx/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.1.13.5.nupkg.sha512"
+    },
+    "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mIGTtXxqK8UKOFAATAFUIO5WQeBVmmR0mPkFMLzHUKIb6Q7Wq6W106+g0k5zaI7S6zg9frrbn2OmDyqz53Nnvw==",
+      "path": "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.runtime.android-arm64.1.13.5.nupkg.sha512"
+    },
+    "org.k2fsa.sherpa.onnx.runtime.android-x64/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z1hYSe8W1yDH0kO2/Yd+e1xduJxz3laPXXm4dP/gIwJn+7CPGeVI95rJtVHqmGoLoDkoeWiuePM6m95jvZ1pUQ==",
+      "path": "org.k2fsa.sherpa.onnx.runtime.android-x64/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.runtime.android-x64.1.13.5.nupkg.sha512"
+    },
+    "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eagmOCQZBmmLBsPK7ye4O2ByCvMDhA03Xb3ddzf7EF/i9jpAmlN6Bk55vZ7yeo2xhBzUZKDbcNm9t6rmzU4Ygg==",
+      "path": "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.runtime.linux-arm64.1.13.5.nupkg.sha512"
+    },
+    "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4ztIRWpJOnaJ2c4s/m3QkZ9fM3hdvVEDQoa5rRWgeL3ru9dJbmpHpha4ZQQBMn2cy2IgafKZjqne126XHJj0Ww==",
+      "path": "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.runtime.linux-x64.1.13.5.nupkg.sha512"
+    },
+    "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r3PDv29Klz4P3r1iKORSXM0lcVS/O5EIiQ3kSf/XATRk6j76+TYJdLxkMlLIIEDxIYsH6KWxhIJSa+OsTtYXHA==",
+      "path": "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.runtime.osx-arm64.1.13.5.nupkg.sha512"
+    },
+    "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HIqaUkE8EHk0gL8RLWvIRe7ZMvFGjlG367ILe0sofXH/lNJ0z6F6eoJGy7cspPxzSop0aqCp/jJFfZqnADna0w==",
+      "path": "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.runtime.osx-x64.1.13.5.nupkg.sha512"
+    },
+    "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N65U3UChsvVQMFDAAMAGMVdlsZY2gNzVo7+28Cz4/AW9VmdnJjGkioPbZNca2wYUnuSPlJBn2JwJIGntty5mmA==",
+      "path": "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.runtime.win-arm64.1.13.5.nupkg.sha512"
+    },
+    "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IeH3t8RFhBI+AifZksnG3yvetC3/K7KV2Uo7kVWILN0M67UqC1OHE3T9saDersFaRxCWFFz1pV9L+Hsngj2wCg==",
+      "path": "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.runtime.win-x64.1.13.5.nupkg.sha512"
+    },
+    "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5pdNAFMm/2lzNvvEFlRi7XZttg1l8869EKczh21UFNN0qhHZld7iZhOQXsuopfFGXZvCnr+bGfWy9pqUA530pw==",
+      "path": "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.5",
+      "hashPath": "org.k2fsa.sherpa.onnx.runtime.win-x86.1.13.5.nupkg.sha512"
+    },
     "System.Speech/10.0.11": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-25EiYjCzE5CLx5CkOOum40bg8EBnVBNqklyEyn1KJT872eEh3ZakJppgunMqC2Hz1lJv9Mp7YbCC6LI1Ceemdw==",
       "path": "system.speech/10.0.11",
       "hashPath": "system.speech.10.0.11.nupkg.sha512"
+    },
+    "System.Windows.Extensions/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i0g4nqBAS7ocsV7mlK9b+7B0C5g6r2S6QFxVTdRInKmVdnTBR6M25Pgv811jTxif2k/NhIoYyg2NmWT8xpG0tQ==",
+      "path": "system.windows.extensions/10.0.11",
+      "hashPath": "system.windows.extensions.10.0.11.nupkg.sha512"
     }
   },
   "runtimes": {

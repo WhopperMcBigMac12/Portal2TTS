@@ -1,5 +1,5 @@
-Voice1=Microsoft David
-Voice2=Microsoft Zira
-
-Rate=0
-Volume=100
+voice1=GLaDOS
+voice2=Microsoft David
+voice3=GLaDOS
+rate=0
+volume=100

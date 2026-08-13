@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Portal2TTS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9866e9dd5e103ad0a48c5625b6b8d956872f2be")]
 [assembly: System.Reflection.AssemblyProductAttribute("Portal2TTS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Portal2TTS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

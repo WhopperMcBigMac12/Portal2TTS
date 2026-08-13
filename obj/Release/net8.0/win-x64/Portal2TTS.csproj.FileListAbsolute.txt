@@ -197,3 +197,8 @@ C:\Mods\DllMods\Portal2TTS\obj\Release\net8.0\win-x64\refint\Portal2TTS.dll
 C:\Mods\DllMods\Portal2TTS\obj\Release\net8.0\win-x64\Portal2TTS.pdb
 C:\Mods\DllMods\Portal2TTS\obj\Release\net8.0\win-x64\Portal2TTS.genruntimeconfig.cache
 C:\Mods\DllMods\Portal2TTS\obj\Release\net8.0\win-x64\ref\Portal2TTS.dll
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\win-x64\sherpa-onnx.dll
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\win-x64\System.Windows.Extensions.dll
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\win-x64\onnxruntime.dll
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\win-x64\sherpa-onnx-c-api.dll
+C:\Mods\DllMods\Portal2TTS\obj\Release\net8.0\win-x64\Portal2TTS.sourcelink.json

@@ -1,2 +1,4 @@
 C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\win-x64\Portal2TTS.pdb
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\win-x64\onnxruntime.dll
+C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\win-x64\sherpa-onnx-c-api.dll
 C:\Mods\DllMods\Portal2TTS\bin\Release\net8.0\publish\win-x64\Portal2TTS.exe

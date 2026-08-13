@@ -8,4 +8,15 @@ Right click Portal 2 in library, go to properties, and add "-condebug" to launch
 Launch program AFTER joining match!
 
 # Important
-This repoistory uses SignPath Foundation for code signing.
+## Code signing policy
+
+Free code signing provided by SignPath.io, certificate by SignPath Foundation.
+
+### Signing roles
+
+- Committer and reviewer: WhopperMcBigMac12
+- Approver: WhopperMcBigMac12
+
+### Privacy
+
+This program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it.

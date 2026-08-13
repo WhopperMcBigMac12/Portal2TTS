@@ -2,18 +2,17 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "org.k2fsa.sherpa.onnx/1.13.5": {
+      "org.k2fsa.sherpa.onnx/1.13.4": {
         "type": "package",
         "dependencies": {
-          "org.k2fsa.sherpa.onnx.runtime.android-arm64": "1.13.5",
-          "org.k2fsa.sherpa.onnx.runtime.android-x64": "1.13.5",
-          "org.k2fsa.sherpa.onnx.runtime.linux-arm64": "1.13.5",
-          "org.k2fsa.sherpa.onnx.runtime.linux-x64": "1.13.5",
-          "org.k2fsa.sherpa.onnx.runtime.osx-arm64": "1.13.5",
-          "org.k2fsa.sherpa.onnx.runtime.osx-x64": "1.13.5",
-          "org.k2fsa.sherpa.onnx.runtime.win-arm64": "1.13.5",
-          "org.k2fsa.sherpa.onnx.runtime.win-x64": "1.13.5",
-          "org.k2fsa.sherpa.onnx.runtime.win-x86": "1.13.5"
+          "org.k2fsa.sherpa.onnx.runtime.android-arm64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.linux-arm64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.linux-x64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.osx-arm64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.osx-x64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.win-arm64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.win-x64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.win-x86": "1.13.4"
         },
         "compile": {
           "lib/net8.0/sherpa-onnx.dll": {}
@@ -22,7 +21,7 @@
           "lib/net8.0/sherpa-onnx.dll": {}
         }
       },
-      "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.5": {
+      "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.4": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/android-arm64/native/libonnxruntime.so": {
@@ -35,20 +34,7 @@
           }
         }
       },
-      "org.k2fsa.sherpa.onnx.runtime.android-x64/1.13.5": {
-        "type": "package",
-        "runtimeTargets": {
-          "runtimes/android-x64/native/libonnxruntime.so": {
-            "assetType": "native",
-            "rid": "android-x64"
-          },
-          "runtimes/android-x64/native/libsherpa-onnx-c-api.so": {
-            "assetType": "native",
-            "rid": "android-x64"
-          }
-        }
-      },
-      "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.5": {
+      "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.4": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/linux-arm64/native/libonnxruntime.so": {
@@ -61,7 +47,7 @@
           }
         }
       },
-      "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.5": {
+      "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.4": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/linux-x64/native/libonnxruntime.so": {
@@ -74,9 +60,13 @@
           }
         }
       },
-      "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.5": {
+      "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.4": {
         "type": "package",
         "runtimeTargets": {
+          "runtimes/osx-arm64/native/libonnxruntime.1.27.0.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
           "runtimes/osx-arm64/native/libonnxruntime.dylib": {
             "assetType": "native",
             "rid": "osx-arm64"
@@ -87,9 +77,13 @@
           }
         }
       },
-      "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.5": {
+      "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.4": {
         "type": "package",
         "runtimeTargets": {
+          "runtimes/osx-x64/native/libonnxruntime.1.27.0.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
           "runtimes/osx-x64/native/libonnxruntime.dylib": {
             "assetType": "native",
             "rid": "osx-x64"
@@ -100,7 +94,7 @@
           }
         }
       },
-      "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.5": {
+      "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.4": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/win-arm64/native/onnxruntime.dll": {
@@ -113,7 +107,7 @@
           }
         }
       },
-      "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.5": {
+      "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.4": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/win-x64/native/onnxruntime.dll": {
@@ -126,7 +120,7 @@
           }
         }
       },
-      "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.5": {
+      "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.4": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/win-x86/native/onnxruntime.dll": {
@@ -139,7 +133,7 @@
           }
         }
       },
-      "System.Speech/10.0.11": {
+      "System.Speech/10.0.10": {
         "type": "package",
         "compile": {
           "lib/net8.0/System.Speech.dll": {
@@ -161,7 +155,7 @@
           }
         }
       },
-      "System.Windows.Extensions/10.0.11": {
+      "System.Windows.Extensions/10.0.10": {
         "type": "package",
         "compile": {
           "lib/net8.0/System.Windows.Extensions.dll": {
@@ -180,13 +174,91 @@
           }
         }
       }
+    },
+    "net8.0/win-x64": {
+      "org.k2fsa.sherpa.onnx/1.13.4": {
+        "type": "package",
+        "dependencies": {
+          "org.k2fsa.sherpa.onnx.runtime.android-arm64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.linux-arm64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.linux-x64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.osx-arm64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.osx-x64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.win-arm64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.win-x64": "1.13.4",
+          "org.k2fsa.sherpa.onnx.runtime.win-x86": "1.13.4"
+        },
+        "compile": {
+          "lib/net8.0/sherpa-onnx.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/sherpa-onnx.dll": {}
+        }
+      },
+      "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.4": {
+        "type": "package"
+      },
+      "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.4": {
+        "type": "package"
+      },
+      "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.4": {
+        "type": "package"
+      },
+      "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.4": {
+        "type": "package"
+      },
+      "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.4": {
+        "type": "package"
+      },
+      "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.4": {
+        "type": "package"
+      },
+      "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.4": {
+        "type": "package",
+        "native": {
+          "runtimes/win-x64/native/onnxruntime.dll": {},
+          "runtimes/win-x64/native/sherpa-onnx-c-api.dll": {}
+        }
+      },
+      "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.4": {
+        "type": "package"
+      },
+      "System.Speech/10.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net8.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.Windows.Extensions/10.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Windows.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net8.0/System.Windows.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      }
     }
   },
   "libraries": {
-    "org.k2fsa.sherpa.onnx/1.13.5": {
-      "sha512": "YCk9fwwlioQ2F9dQHhHpUyP96O+YWn3WTQJERWXdHqWgHOMzwKu+TKgW9Rx8hKA3ukDJwS1i5OqLdSCB4bUbvw==",
+    "org.k2fsa.sherpa.onnx/1.13.4": {
+      "sha512": "IT+CJrER3K8VWYXZNuJR2ufaiWvzlAiD2njSaLtHCeizFk8UolLZKsuYcY+VWi3f/CO5AXNrNGu7kMmpz+EkGQ==",
       "type": "package",
-      "path": "org.k2fsa.sherpa.onnx/1.13.5",
+      "path": "org.k2fsa.sherpa.onnx/1.13.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -200,140 +272,128 @@
         "lib/net7.0/sherpa-onnx.dll",
         "lib/net8.0/sherpa-onnx.dll",
         "lib/netstandard2.0/sherpa-onnx.dll",
-        "org.k2fsa.sherpa.onnx.1.13.5.nupkg.sha512",
+        "org.k2fsa.sherpa.onnx.1.13.4.nupkg.sha512",
         "org.k2fsa.sherpa.onnx.nuspec"
       ]
     },
-    "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.5": {
-      "sha512": "mIGTtXxqK8UKOFAATAFUIO5WQeBVmmR0mPkFMLzHUKIb6Q7Wq6W106+g0k5zaI7S6zg9frrbn2OmDyqz53Nnvw==",
+    "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.4": {
+      "sha512": "Z1CxJ86yz0ZTihW0wdNmMVMtHUeddzH/dzEATTOpqpePM9Mam2aQEuIkwIt23KxgLzrqqSDHnThLp7vR1ve+zQ==",
       "type": "package",
-      "path": "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.5",
+      "path": "org.k2fsa.sherpa.onnx.runtime.android-arm64/1.13.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "org.k2fsa.sherpa.onnx.runtime.android-arm64.1.13.5.nupkg.sha512",
+        "org.k2fsa.sherpa.onnx.runtime.android-arm64.1.13.4.nupkg.sha512",
         "org.k2fsa.sherpa.onnx.runtime.android-arm64.nuspec",
         "runtimes/android-arm64/native/libonnxruntime.so",
         "runtimes/android-arm64/native/libsherpa-onnx-c-api.so"
       ]
     },
-    "org.k2fsa.sherpa.onnx.runtime.android-x64/1.13.5": {
-      "sha512": "Z1hYSe8W1yDH0kO2/Yd+e1xduJxz3laPXXm4dP/gIwJn+7CPGeVI95rJtVHqmGoLoDkoeWiuePM6m95jvZ1pUQ==",
+    "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.4": {
+      "sha512": "ByuOqzOZumY5kMA+zF2HWLCr9KudwWi6Z1lfkgjx6W+RrglRwqBGm2esc6817VZ2Uk1eBZ4N7LP8rryZ31t8Vg==",
       "type": "package",
-      "path": "org.k2fsa.sherpa.onnx.runtime.android-x64/1.13.5",
+      "path": "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "org.k2fsa.sherpa.onnx.runtime.android-x64.1.13.5.nupkg.sha512",
-        "org.k2fsa.sherpa.onnx.runtime.android-x64.nuspec",
-        "runtimes/android-x64/native/libonnxruntime.so",
-        "runtimes/android-x64/native/libsherpa-onnx-c-api.so"
-      ]
-    },
-    "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.5": {
-      "sha512": "eagmOCQZBmmLBsPK7ye4O2ByCvMDhA03Xb3ddzf7EF/i9jpAmlN6Bk55vZ7yeo2xhBzUZKDbcNm9t6rmzU4Ygg==",
-      "type": "package",
-      "path": "org.k2fsa.sherpa.onnx.runtime.linux-arm64/1.13.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "org.k2fsa.sherpa.onnx.runtime.linux-arm64.1.13.5.nupkg.sha512",
+        "org.k2fsa.sherpa.onnx.runtime.linux-arm64.1.13.4.nupkg.sha512",
         "org.k2fsa.sherpa.onnx.runtime.linux-arm64.nuspec",
         "runtimes/linux-arm64/native/libonnxruntime.so",
         "runtimes/linux-arm64/native/libsherpa-onnx-c-api.so"
       ]
     },
-    "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.5": {
-      "sha512": "4ztIRWpJOnaJ2c4s/m3QkZ9fM3hdvVEDQoa5rRWgeL3ru9dJbmpHpha4ZQQBMn2cy2IgafKZjqne126XHJj0Ww==",
+    "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.4": {
+      "sha512": "ow80s8w4jDkq9RpUwhS0S4TEXVgk20ywYtaKEAMbMLFFSmThjwel1hbCXxrzc16zjkMHsVuxYVf/BMGdAB6Lig==",
       "type": "package",
-      "path": "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.5",
+      "path": "org.k2fsa.sherpa.onnx.runtime.linux-x64/1.13.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "org.k2fsa.sherpa.onnx.runtime.linux-x64.1.13.5.nupkg.sha512",
+        "org.k2fsa.sherpa.onnx.runtime.linux-x64.1.13.4.nupkg.sha512",
         "org.k2fsa.sherpa.onnx.runtime.linux-x64.nuspec",
         "runtimes/linux-x64/native/libonnxruntime.so",
         "runtimes/linux-x64/native/libsherpa-onnx-c-api.so"
       ]
     },
-    "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.5": {
-      "sha512": "r3PDv29Klz4P3r1iKORSXM0lcVS/O5EIiQ3kSf/XATRk6j76+TYJdLxkMlLIIEDxIYsH6KWxhIJSa+OsTtYXHA==",
+    "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.4": {
+      "sha512": "YxDNdmQQj0Wj9IVgVG8iiPaEkJcGuVyk6F2l9+V7Kpj88ElsfqCIwno50CLpiVBAoQJzrpnnn+DlSlOJgffK8g==",
       "type": "package",
-      "path": "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.5",
+      "path": "org.k2fsa.sherpa.onnx.runtime.osx-arm64/1.13.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "org.k2fsa.sherpa.onnx.runtime.osx-arm64.1.13.5.nupkg.sha512",
+        "org.k2fsa.sherpa.onnx.runtime.osx-arm64.1.13.4.nupkg.sha512",
         "org.k2fsa.sherpa.onnx.runtime.osx-arm64.nuspec",
+        "runtimes/osx-arm64/native/libonnxruntime.1.27.0.dylib",
         "runtimes/osx-arm64/native/libonnxruntime.dylib",
         "runtimes/osx-arm64/native/libsherpa-onnx-c-api.dylib"
       ]
     },
-    "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.5": {
-      "sha512": "HIqaUkE8EHk0gL8RLWvIRe7ZMvFGjlG367ILe0sofXH/lNJ0z6F6eoJGy7cspPxzSop0aqCp/jJFfZqnADna0w==",
+    "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.4": {
+      "sha512": "TXY2HI7zJigU80pxb1ZBByHHqBzOWEouP+NScYnmBP2WIUWQ0fAmizmMYOyko8izqRwozVRrdA5O7ZgAsvLF8w==",
       "type": "package",
-      "path": "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.5",
+      "path": "org.k2fsa.sherpa.onnx.runtime.osx-x64/1.13.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "org.k2fsa.sherpa.onnx.runtime.osx-x64.1.13.5.nupkg.sha512",
+        "org.k2fsa.sherpa.onnx.runtime.osx-x64.1.13.4.nupkg.sha512",
         "org.k2fsa.sherpa.onnx.runtime.osx-x64.nuspec",
+        "runtimes/osx-x64/native/libonnxruntime.1.27.0.dylib",
         "runtimes/osx-x64/native/libonnxruntime.dylib",
         "runtimes/osx-x64/native/libsherpa-onnx-c-api.dylib"
       ]
     },
-    "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.5": {
-      "sha512": "N65U3UChsvVQMFDAAMAGMVdlsZY2gNzVo7+28Cz4/AW9VmdnJjGkioPbZNca2wYUnuSPlJBn2JwJIGntty5mmA==",
+    "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.4": {
+      "sha512": "NE/VCE1I6E4IvifCDv5oa9p5M7JatLAMSg7qdD2yz6W0GeykSF65UKn5o32o4FrUOteXjvJpMHIqGzLOa6SRQA==",
       "type": "package",
-      "path": "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.5",
+      "path": "org.k2fsa.sherpa.onnx.runtime.win-arm64/1.13.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "org.k2fsa.sherpa.onnx.runtime.win-arm64.1.13.5.nupkg.sha512",
+        "org.k2fsa.sherpa.onnx.runtime.win-arm64.1.13.4.nupkg.sha512",
         "org.k2fsa.sherpa.onnx.runtime.win-arm64.nuspec",
         "runtimes/win-arm64/native/onnxruntime.dll",
         "runtimes/win-arm64/native/sherpa-onnx-c-api.dll"
       ]
     },
-    "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.5": {
-      "sha512": "IeH3t8RFhBI+AifZksnG3yvetC3/K7KV2Uo7kVWILN0M67UqC1OHE3T9saDersFaRxCWFFz1pV9L+Hsngj2wCg==",
+    "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.4": {
+      "sha512": "HETGez6u+K+h7YF8nE40iXWrEjOIKDASGqlqP8dOJf5THMpEUmRlxgr9Mvlu7bg0TeAUI3gdBDY3Ejhwdl1HNw==",
       "type": "package",
-      "path": "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.5",
+      "path": "org.k2fsa.sherpa.onnx.runtime.win-x64/1.13.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "org.k2fsa.sherpa.onnx.runtime.win-x64.1.13.5.nupkg.sha512",
+        "org.k2fsa.sherpa.onnx.runtime.win-x64.1.13.4.nupkg.sha512",
         "org.k2fsa.sherpa.onnx.runtime.win-x64.nuspec",
         "runtimes/win-x64/native/onnxruntime.dll",
         "runtimes/win-x64/native/sherpa-onnx-c-api.dll"
       ]
     },
-    "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.5": {
-      "sha512": "5pdNAFMm/2lzNvvEFlRi7XZttg1l8869EKczh21UFNN0qhHZld7iZhOQXsuopfFGXZvCnr+bGfWy9pqUA530pw==",
+    "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.4": {
+      "sha512": "/sl2z1Tvhvated2kS9KWV4GBEv0tgW6F/2t+3HAYJzO0cWNs7onCQHpuc/egxsFQHYo7G8DVWyQWtsfICkDFaQ==",
       "type": "package",
-      "path": "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.5",
+      "path": "org.k2fsa.sherpa.onnx.runtime.win-x86/1.13.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "org.k2fsa.sherpa.onnx.runtime.win-x86.1.13.5.nupkg.sha512",
+        "org.k2fsa.sherpa.onnx.runtime.win-x86.1.13.4.nupkg.sha512",
         "org.k2fsa.sherpa.onnx.runtime.win-x86.nuspec",
         "runtimes/win-x86/native/onnxruntime.dll",
         "runtimes/win-x86/native/sherpa-onnx-c-api.dll"
       ]
     },
-    "System.Speech/10.0.11": {
-      "sha512": "25EiYjCzE5CLx5CkOOum40bg8EBnVBNqklyEyn1KJT872eEh3ZakJppgunMqC2Hz1lJv9Mp7YbCC6LI1Ceemdw==",
+    "System.Speech/10.0.10": {
+      "sha512": "a6xJl9sq7UHVx2hfrrg1h1800d0dI1o8ETEQ5YxOiND/DG57B0cC+SRQKmVE/bKA7U0YwWXKdOfz5wG2x+UDCA==",
       "type": "package",
-      "path": "system.speech/10.0.11",
+      "path": "system.speech/10.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -357,15 +417,15 @@
         "runtimes/win/lib/net8.0/System.Speech.xml",
         "runtimes/win/lib/net9.0/System.Speech.dll",
         "runtimes/win/lib/net9.0/System.Speech.xml",
-        "system.speech.10.0.11.nupkg.sha512",
+        "system.speech.10.0.10.nupkg.sha512",
         "system.speech.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Windows.Extensions/10.0.11": {
-      "sha512": "i0g4nqBAS7ocsV7mlK9b+7B0C5g6r2S6QFxVTdRInKmVdnTBR6M25Pgv811jTxif2k/NhIoYyg2NmWT8xpG0tQ==",
+    "System.Windows.Extensions/10.0.10": {
+      "sha512": "Jat4EYE3Z7M66YsGihR24WOSO0pIWvxC+k6QG7/JnSepR+ObanaTjrl1TCN/1uMlBdBhFCfO/GjbMP24TJiRGQ==",
       "type": "package",
-      "path": "system.windows.extensions/10.0.11",
+      "path": "system.windows.extensions/10.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -384,7 +444,7 @@
         "runtimes/win/lib/net8.0/System.Windows.Extensions.xml",
         "runtimes/win/lib/net9.0/System.Windows.Extensions.dll",
         "runtimes/win/lib/net9.0/System.Windows.Extensions.xml",
-        "system.windows.extensions.10.0.11.nupkg.sha512",
+        "system.windows.extensions.10.0.10.nupkg.sha512",
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -392,9 +452,9 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "System.Speech >= 10.0.11",
-      "System.Windows.Extensions >= 10.0.11",
-      "org.k2fsa.sherpa.onnx >= 1.13.5"
+      "System.Speech >= 10.0.10",
+      "System.Windows.Extensions >= 10.0.10",
+      "org.k2fsa.sherpa.onnx >= 1.13.4"
     ]
   },
   "packageFolders": {
@@ -444,15 +504,15 @@
         "dependencies": {
           "System.Speech": {
             "target": "Package",
-            "version": "[10.0.11, )"
+            "version": "[10.0.10, )"
           },
           "System.Windows.Extensions": {
             "target": "Package",
-            "version": "[10.0.11, )"
+            "version": "[10.0.10, )"
           },
           "org.k2fsa.sherpa.onnx": {
             "target": "Package",
-            "version": "[1.13.5, )"
+            "version": "[1.13.4, )"
           }
         },
         "imports": [
@@ -466,12 +526,31 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[8.0.23, 8.0.23]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }

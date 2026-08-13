@@ -18,7 +18,6 @@ string configFile = Path.Combine(
 
 string voice1Name = "Microsoft David";
 string voice2Name = "Microsoft Zira";
-string voice3Name = "GLaDOS";
 
 int speechRate = 0;
 int speechVolume = 100;
@@ -51,10 +50,6 @@ if (File.Exists(configFile))
 
       case "voice2":
         voice2Name = value;
-        break;
-
-      case "voice3":
-        voice3Name = value;
         break;
 
       case "rate":
@@ -142,36 +137,60 @@ if (!File.Exists(logFile))
 using SpeechSynthesizer synth1 = new SpeechSynthesizer();
 using SpeechSynthesizer synth2 = new SpeechSynthesizer();
 
-bool voice1Found = TrySelectVoice(
-    synth1,
-    voice1Name
-);
+bool voice1IsGlados =
+    string.Equals(
+        voice1Name,
+        "GLaDOS",
+        StringComparison.OrdinalIgnoreCase
+    );
 
-bool voice2Found = TrySelectVoice(
-    synth2,
-    voice2Name
-);
+bool voice2IsGlados =
+    string.Equals(
+        voice2Name,
+        "GLaDOS",
+        StringComparison.OrdinalIgnoreCase
+    );
 
-if (!voice1Found)
+
+// Only try to find a Windows voice when the configured voice
+// is NOT GLaDOS.
+
+if (!voice1IsGlados)
 {
-  Console.WriteLine(
-      $"WARNING: Voice '{voice1Name}' was not found."
+  bool voice1Found = TrySelectVoice(
+      synth1,
+      voice1Name
   );
 
-  Console.WriteLine(
-      "Using Windows default voice for Voice 1."
-  );
+  if (!voice1Found)
+  {
+    Console.WriteLine(
+        $"WARNING: Voice '{voice1Name}' was not found."
+    );
+
+    Console.WriteLine(
+        "Using Windows default voice for Voice 1."
+    );
+  }
 }
 
-if (!voice2Found)
+if (!voice2IsGlados)
 {
-  Console.WriteLine(
-      $"WARNING: Voice '{voice2Name}' was not found."
+  bool voice2Found = TrySelectVoice(
+      synth2,
+      voice2Name
   );
 
-  Console.WriteLine(
-      "Using Windows default voice for Voice 2."
-  );
+  if (!voice2Found)
+  {
+    Console.WriteLine(
+        $"WARNING: Voice '{voice2Name}' was not found."
+    );
+
+    Console.WriteLine(
+        "Using Windows default voice for Voice 2."
+    );
+  }
 }
 
 synth1.Rate = speechRate;
@@ -216,7 +235,11 @@ bool gladosAvailable =
     File.Exists(gladosTokens) &&
     Directory.Exists(gladosDataDir);
 
-if (!gladosAvailable)
+bool gladosNeeded =
+    voice1IsGlados ||
+    voice2IsGlados;
+
+if (gladosNeeded && !gladosAvailable)
 {
   Console.WriteLine(
       "WARNING: GLaDOS model files were not found."
@@ -248,7 +271,7 @@ if (!gladosAvailable)
 
 OfflineTts? gladosTts = null;
 
-if (gladosAvailable)
+if (gladosNeeded && gladosAvailable)
 {
   try
   {
@@ -302,9 +325,12 @@ Console.WriteLine();
 // ============================================================
 
 Console.WriteLine("Voice configuration:");
-Console.WriteLine($"Voice 1: {synth1.Voice.Name}");
-Console.WriteLine($"Voice 2: {synth2.Voice.Name}");
-Console.WriteLine($"Voice 3: {voice3Name}");
+Console.WriteLine(
+    $"Voice 1: {GetVoiceDisplayName(voice1Name, synth1)}"
+);
+Console.WriteLine(
+    $"Voice 2: {GetVoiceDisplayName(voice2Name, synth2)}"
+);
 Console.WriteLine($"Rate:    {speechRate}");
 Console.WriteLine($"Volume:  {speechVolume}");
 Console.WriteLine();
@@ -353,6 +379,7 @@ Dictionary<string, int> playerVoices =
 // ============================================================
 
 string? lastSeenChat = null;
+
 
 // ============================================================
 // MAIN LOOP
@@ -413,30 +440,19 @@ while (true)
   // --------------------------------------------------------
   // Assign a voice to new players.
   //
-  // First player -> GLaDOS
-  // Second player -> Voice 1
-  // Third player -> Voice 2
+  // First player  -> Voice 1
+  // Second player -> Voice 2
   // --------------------------------------------------------
 
   if (!playerVoices.ContainsKey(playerName))
   {
-    if (
-        gladosTts != null &&
-        !playerVoices.ContainsValue(3)
-    )
-    {
-      playerVoices[playerName] = 3;
-
-      Console.WriteLine(
-          $"Assigned {playerName} → GLaDOS"
-      );
-    }
-    else if (!playerVoices.ContainsValue(1))
+    if (!playerVoices.ContainsValue(1))
     {
       playerVoices[playerName] = 1;
 
       Console.WriteLine(
-          $"Assigned {playerName} → Voice 1 ({synth1.Voice.Name})"
+          $"Assigned {playerName} → Voice 1 " +
+          $"({GetVoiceDisplayName(voice1Name, synth1)})"
       );
     }
     else if (!playerVoices.ContainsValue(2))
@@ -444,7 +460,8 @@ while (true)
       playerVoices[playerName] = 2;
 
       Console.WriteLine(
-          $"Assigned {playerName} → Voice 2 ({synth2.Voice.Name})"
+          $"Assigned {playerName} → Voice 2 " +
+          $"({GetVoiceDisplayName(voice2Name, synth2)})"
       );
     }
     else
@@ -458,47 +475,42 @@ while (true)
   }
 
 
-// --------------------------------------------------------
-// Duplicate protection.
-//
-// Portal 2 writes duplicate chat lines consecutively.
-// We therefore compare against the immediately previous
-// chat line instead of using a time window.
-//
-// This also works when GLaDOS is busy speaking a long
-// message and the duplicate is waiting in console.log.
-// --------------------------------------------------------
+  // --------------------------------------------------------
+  // Duplicate protection.
+  //
+  // Portal 2 can write duplicate chat lines consecutively.
+  // --------------------------------------------------------
 
-string currentChat =
-    playerName + ":" + message;
+  string currentChat =
+      playerName + ":" + message;
 
-if (
-    string.Equals(
-        currentChat,
-        lastSeenChat,
-        StringComparison.Ordinal
-    )
-)
-{
-  Console.WriteLine(
-      $"IGNORED DUPLICATE: {playerName}: {message}"
-  );
+  if (
+      string.Equals(
+          currentChat,
+          lastSeenChat,
+          StringComparison.Ordinal
+      )
+  )
+  {
+    Console.WriteLine(
+        $"IGNORED DUPLICATE: {playerName}: {message}"
+    );
 
-  continue;
-}
+    continue;
+  }
 
-lastSeenChat = currentChat;
+  lastSeenChat = currentChat;
 
 
-// --------------------------------------------------------
-// Display chat.
-// --------------------------------------------------------
+  // --------------------------------------------------------
+  // Display chat.
+  // --------------------------------------------------------
 
-int assignedVoice =
+  int assignedVoice =
       playerVoices[playerName];
 
   Console.WriteLine(
-      $"CHAT [{VoiceLabel(assignedVoice)}] " +
+      $"CHAT [{VoiceLabel(assignedVoice, voice1Name, voice2Name)}] " +
       $"{playerName}: {message}"
   );
 
@@ -511,25 +523,41 @@ int assignedVoice =
   {
     if (assignedVoice == 1)
     {
-      synth1.SpeakAsyncCancelAll();
-
-      synth1.SpeakAsync(message);
+      if (voice1IsGlados)
+      {
+        if (gladosTts != null)
+        {
+          await SpeakGlados(
+              gladosTts,
+              message,
+              speechVolume
+          );
+        }
+      }
+      else
+      {
+        synth1.SpeakAsyncCancelAll();
+        synth1.SpeakAsync(message);
+      }
     }
     else if (assignedVoice == 2)
     {
-      synth2.SpeakAsyncCancelAll();
-
-      synth2.SpeakAsync(message);
-    }
-    else if (
-        assignedVoice == 3 &&
-        gladosTts != null
-    )
-    {
-      await SpeakGlados(
-          gladosTts,
-          message
-      );
+      if (voice2IsGlados)
+      {
+        if (gladosTts != null)
+        {
+          await SpeakGlados(
+              gladosTts,
+              message,
+              speechVolume
+          );
+        }
+      }
+      else
+      {
+        synth2.SpeakAsyncCancelAll();
+        synth2.SpeakAsync(message);
+      }
     }
   }
   catch (Exception ex)
@@ -547,7 +575,8 @@ int assignedVoice =
 
 static async Task SpeakGlados(
     OfflineTts tts,
-    string text
+    string text,
+    int volume
 )
 {
   string temporaryWave =
@@ -599,6 +628,7 @@ static async Task SpeakGlados(
         );
 
     player.Load();
+
     player.PlaySync();
   }
   finally
@@ -620,16 +650,41 @@ static async Task SpeakGlados(
 // ============================================================
 
 static string VoiceLabel(
-    int voiceNumber
+    int voiceNumber,
+    string voice1Name,
+    string voice2Name
 )
 {
   return voiceNumber switch
   {
-    1 => "Voice 1",
-    2 => "Voice 2",
-    3 => "GLaDOS",
+    1 => $"Voice 1: {voice1Name}",
+    2 => $"Voice 2: {voice2Name}",
     _ => "Unknown"
   };
+}
+
+
+// ============================================================
+// VOICE DISPLAY NAME
+// ============================================================
+
+static string GetVoiceDisplayName(
+    string configuredName,
+    SpeechSynthesizer synthesizer
+)
+{
+  if (
+      string.Equals(
+          configuredName,
+          "GLaDOS",
+          StringComparison.OrdinalIgnoreCase
+      )
+  )
+  {
+    return "GLaDOS";
+  }
+
+  return synthesizer.Voice.Name;
 }
 
 
@@ -676,38 +731,41 @@ static string FindGladosDirectory()
   string executableDirectory =
       AppContext.BaseDirectory;
 
-
-  string projectRelative =
-      Path.GetFullPath(
-          Path.Combine(
-              executableDirectory,
-              "..",
-              "..",
-              "..",
-              "glados",
-              "vits-piper-en_US-glados"
-          )
+  string bundledPath =
+      Path.Combine(
+          executableDirectory,
+          "glados",
+          "vits-piper-en_US-glados"
       );
-
 
   if (
       File.Exists(
           Path.Combine(
-              projectRelative,
+              bundledPath,
               "en_US-glados.onnx"
           )
       )
   )
   {
-    return projectRelative;
+    return bundledPath;
   }
 
-
-  const string knownPath =
+  string developmentPath =
       @"C:\Mods\DllMods\Portal2TTS\glados\vits-piper-en_US-glados";
 
+  if (
+      File.Exists(
+          Path.Combine(
+              developmentPath,
+              "en_US-glados.onnx"
+          )
+      )
+  )
+  {
+    return developmentPath;
+  }
 
-  return knownPath;
+  return bundledPath;
 }
 
 

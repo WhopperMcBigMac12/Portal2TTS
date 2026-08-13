@@ -48,15 +48,15 @@
           "dependencies": {
             "System.Speech": {
               "target": "Package",
-              "version": "[10.0.11, )"
+              "version": "[10.0.10, )"
             },
             "System.Windows.Extensions": {
               "target": "Package",
-              "version": "[10.0.11, )"
+              "version": "[10.0.10, )"
             },
             "org.k2fsa.sherpa.onnx": {
               "target": "Package",
-              "version": "[1.13.5, )"
+              "version": "[1.13.4, )"
             }
           },
           "imports": [
@@ -70,12 +70,31 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[8.0.23, 8.0.23]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[8.0.23, 8.0.23]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
         }
       }
     }

@@ -6,3 +6,6 @@ Chat Text To Speech for Portal 2.
 Right click Portal 2 in library, go to properties, and add "-condebug" to launch options!
 
 Launch program AFTER joining match!
+
+# Important
+This repoistory uses SignPath Foundation for code signing.

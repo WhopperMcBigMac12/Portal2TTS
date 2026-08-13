@@ -1,4 +1,0 @@
-voice1=GLaDOS
-voice2=GlaDOS
-rate=0
-volume=100
